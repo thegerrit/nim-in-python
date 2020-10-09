@@ -30,7 +30,7 @@ def user_interface():
     print("b ---- CHALLENGE! Can you beat the binary XOR evaluation Agent")
     print("d ---- Play human vs dynamic agent")
     print("m ---- Mine Solutions")
-    print("a ---- Play versus a winning state")
+    #print("a ---- Play versus a winning state")
     print("q ---- exit\n")
     p = input()
     #initialize the players
@@ -56,16 +56,12 @@ def user_interface():
     elif (p == "m"):
         mine_solutions()
         exit()
-    elif (p == "a"):
-        playerA = players.dynamic_player("init_cache.txt")
-        playerB = players.human_player()
-        d_game = nim_game.nim_game([1, 1, 1, 2, 3, 3, 6, 8, 8, 12, 14, 14, 14])
-        d_game.play(playerA, playerB)
+    elif (p == 'q'):
+        print("Goodbye!")
         exit()
     else:
         print("Error: Invalid Input")
         exit()
-        pass
 
 
     #initialize game
